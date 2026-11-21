@@ -1,0 +1,109 @@
+{
+  "status": "LOCKED_BEFORE_NEW_TRAINING_OR_SCORING",
+  "frozen_utc": "2026-11-02T05:45:02.876816+00:00",
+  "scope": "Subsequently motivated architecture sensitivity. REST primary; ABIDE secondary ASD replication, not MDD external validation. No original results replaced.",
+  "model": {
+    "name": "GCNII-derived signed graph-shift comparator",
+    "n": 116,
+    "hidden": 16,
+    "layers": 2,
+    "alpha": 0.1,
+    "beta": "log(1+0.5/l), l=1,2",
+    "input": "I116",
+    "initial": "H0=ReLU(I W_in+b_in)",
+    "layer": "Hl=ReLU((0.9*S*Dropout(Hprev)+0.1*H0)*((1-beta)*I16+beta*Wl)+bl)",
+    "head": "Linear(Dropout(mean_nodes(H2))); BCEWithLogitsLoss; sigmoid for prediction",
+    "dropout": 0.2,
+    "parameters": 2433,
+    "initialization": "Xavier uniform input and propagation weights; zero explicit biases; PyTorch Linear default head",
+    "reference": "Chen et al. ICML 2020, https://proceedings.mlr.press/v119/chen20v.html",
+    "adaptations": "Signed spectral-normalized S replaces normalized adjacency; anatomical identity features; graph-level mean head; explicit biases. No canonical GCNII theorem claimed."
+  },
+  "models": {
+    "primary": "two-layer first-order spectral graph convolution",
+    "node_features": "I_116",
+    "forward": "H1=ReLU(S W0+b0); H2=ReLU(S H1 W1+b1); h=mean_nodes(H2); logit=h w+b",
+    "hidden": 16,
+    "pooling": "mean",
+    "head": "linear",
+    "dropout": 0.2,
+    "loss": "unweighted binary cross entropy with logits",
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "weight_decay_grid": [
+      0.01,
+      0.0001
+    ],
+    "epoch_grid": [
+      80,
+      160
+    ],
+    "batch": "full training fold",
+    "gradient_clip": 5.0,
+    "seed_count": 1,
+    "seed_rule": "same initialization/dropout stream for arms in a given fold/inner role; independent outer contexts; frozen hash seeds",
+    "inner_selection": "equal validation-site macro Brier across all inner predictions",
+    "tie_rule": "within 1e-10 prefer larger weight decay, then fewer epochs",
+    "comparator": "L2 logistic",
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "scaling": "training-only StandardScaler for LR",
+    "class_weight": null,
+    "threshold": 0.5,
+    "target_recalibration": false
+  },
+  "arms": [
+    "full",
+    "mp",
+    "temporal",
+    "budget",
+    "fixed"
+  ],
+  "participant_roles_sha": "8ead9006927da0a1d35b540cce2a82887251a25d4928862851e60931c82b4908",
+  "protected_originals_sha": "ec90300eb573c062563fe562b54093e094e022e9b2972bc2ef14db7d31e22e07",
+  "external_metadata_sources_sha": "53bf063f69740355a16be67ce53cf1f924371d2bfb19e72ef5484065ef1701c4",
+  "source_hashes": {
+    "OBJECTIVE2_RESTMETA_FMRI\\config\\trained_gnn_v2_20261013.json": "f1d309d92c82a95d8ec2cbe93eb3b84f1eae3c68231124977b1d930b5f25d0ec",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\common.py": "f996f313b9166a3d701cc0c84e12b0328ce1c45553f69a5fc53bac0fe22bb3ba",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\models.py": "3a54b0bea5349d79a88b7fc7ef552cc43076f6096d9ab63afc84dec2dc3aaa03",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\representations.py": "1b0afb0770f167d4aefe4b6d582e7e241619c8475abec421382c9a327c7c99d7",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\experiment.py": "95d7ecdc98706f3874398a60135c7a74e6bd6bddef62c8e33b3f24ca6f36b1ee",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\metrics.py": "bb5fe049bfe10e2c3b5637acbb76011b34dd43e652cf71d7aa829fb2f274b389",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\metric_uncertainty.py": "46e468fad079d726b3783232115d826dcc09673faa7a7b51459a6dfcb55c9738",
+    "OBJECTIVE2_RESTMETA_FMRI\\scripts\\analyze_results.py": "717727493e4ee703595764b9e0ac5ce990f271ba158be8abad94a2274788e29f"
+  },
+  "implementation_hashes": {
+    "study.py": "5b863cd67e7be3329195c1f9f560bf1293c1d1dfd3ea95dec4bef1c855297403",
+    "analysis.py": "3b6949d161a7acfa06b5217900fbb4240d282cf9dcc239b2902e39ed5e3d61c7",
+    "run.ps1": "c9287e327d5579c9892bd056d26165edb3768220bc28cd1fa01a37f1e67f9aa0"
+  },
+  "selection": "Three fixed grouped inner partitions; macro Brier; grid wd [0.01,0.0001], epochs [80,160]; tolerance1e-10 ties prefer larger wd then fewer epochs. lr0.01 Adam, clip5, all parameters decay. No target calibration.",
+  "seed_protocol": "Exact integers in roles; primary seed reused from original; extra seeds1/2 temporal/budget only, primary-selected hyperparameters, no retuning. Same integer is not identical initialization across architectures.",
+  "primary": "REST equal-cohort Gamma=(new temporal Brier-new budget Brier)-(original temporal Brier-original budget Brier), primary seed0",
+  "secondary": "Both architecture contrasts; ABIDE Gamma; all-arm AUC/Brier/log loss/calibration; collapse; three seeds; finite-input replay; existing metadata/prior/LR controls",
+  "bootstrap": {
+    "B": 2000,
+    "scheme": "Paired within cohort x diagnosis; separate cohort-cluster with fresh within resample; all models share draws",
+    "limitations": "Conditional on fixed predictions, excludes training/selection uncertainty. No equivalence or algorithm-level superiority. ABIDE5 centers; finite3.",
+    "calibration": "2000 pooled fixed-cohort diagnosis-stratified draws, failure counts; per-cohort slope suppressed unless >=50 per class; no recalibration"
+  },
+  "collapse": {
+    "constant_range": 1e-07,
+    "near_constant_range": 0.0001,
+    "also_report": "exact zero range, <=1e-6 REST historical sensitivity, SD, logits and embeddings, same hard class; never exclude"
+  },
+  "finite_inputs": "REST native230/last190; ABIDE native230 means first230. first190 and last190 overlap150; preprocessing already full-run; all arms primary, extra seeds temporal/budget; no refit.",
+  "confounding": "Reuse original metadata predictions, cohort handling and metadata sources. ABIDE low FD<=0.2 fixed-score sensitivity; within-cohort age/FD/sex association; REST raw QC categories and whole-derivative FD, no invented temporal alignment.",
+  "limits": {
+    "outer_primary": 90,
+    "outer_extra": 72,
+    "inner_trajectories": 540,
+    "total_training_trajectories": 702,
+    "stop": "One architecture only. Stop on unresolved provenance/leakage/nonfinite error; repair only demonstrated implementation errors with disclosure. No grid/depth/width/readout/seed/cohort expansion; report all results; stop implementation after verification."
+  }
+}

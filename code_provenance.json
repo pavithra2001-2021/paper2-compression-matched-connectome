@@ -1,0 +1,143 @@
+{
+  "status": "Public code release v1.0.0",
+  "files": [
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/common.py",
+      "source_sha256": "f996f313b9166a3d701cc0c84e12b0328ce1c45553f69a5fc53bac0fe22bb3ba",
+      "release_sha256": "f996f313b9166a3d701cc0c84e12b0328ce1c45553f69a5fc53bac0fe22bb3ba",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/experiment.py",
+      "source_sha256": "95d7ecdc98706f3874398a60135c7a74e6bd6bddef62c8e33b3f24ca6f36b1ee",
+      "release_sha256": "95d7ecdc98706f3874398a60135c7a74e6bd6bddef62c8e33b3f24ca6f36b1ee",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/freeze_protocol.py",
+      "source_sha256": "ec82f597afcefe28022b34db4838777f1d77bf99c65965463c1cb5cf2e28713a",
+      "release_sha256": "ec82f597afcefe28022b34db4838777f1d77bf99c65965463c1cb5cf2e28713a",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/prepare_spectra.py",
+      "source_sha256": "0c46795caad4f5d8179587eb8f1589e2c90600913971d3dd1f2b4c70fa7ec26e",
+      "release_sha256": "0c46795caad4f5d8179587eb8f1589e2c90600913971d3dd1f2b4c70fa7ec26e",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/representations.py",
+      "source_sha256": "1b0afb0770f167d4aefe4b6d582e7e241619c8475abec421382c9a327c7c99d7",
+      "release_sha256": "1b0afb0770f167d4aefe4b6d582e7e241619c8475abec421382c9a327c7c99d7",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/models.py",
+      "source_sha256": "3a54b0bea5349d79a88b7fc7ef552cc43076f6096d9ab63afc84dec2dc3aaa03",
+      "release_sha256": "3a54b0bea5349d79a88b7fc7ef552cc43076f6096d9ab63afc84dec2dc3aaa03",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/metrics.py",
+      "source_sha256": "bb5fe049bfe10e2c3b5637acbb76011b34dd43e652cf71d7aa829fb2f274b389",
+      "release_sha256": "bb5fe049bfe10e2c3b5637acbb76011b34dd43e652cf71d7aa829fb2f274b389",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/analyze_results.py",
+      "source_sha256": "717727493e4ee703595764b9e0ac5ce990f271ba158be8abad94a2274788e29f",
+      "release_sha256": "717727493e4ee703595764b9e0ac5ce990f271ba158be8abad94a2274788e29f",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/metric_uncertainty.py",
+      "source_sha256": "46e468fad079d726b3783232115d826dcc09673faa7a7b51459a6dfcb55c9738",
+      "release_sha256": "46e468fad079d726b3783232115d826dcc09673faa7a7b51459a6dfcb55c9738",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/nuisance_controls.py",
+      "source_sha256": "4ec49bae42203b5611428719b77ac902842198567f457e1102dc92c44a6b235a",
+      "release_sha256": "a3a4b6c767d685ac617a61ef8bf11bd7aac1f0c06540d89db165af4051be49c6",
+      "path_only_adaptation": true
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/secondary_spectral.py",
+      "source_sha256": "df7a2b5d9cc8422fc69209ec78df6693c307cf6df95fffe124bc76232d9a8044",
+      "release_sha256": "df7a2b5d9cc8422fc69209ec78df6693c307cf6df95fffe124bc76232d9a8044",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/secondary_analysis.py",
+      "source_sha256": "676baa98e4b413e8688fd98eec9ca1fe124bd7d4425e09b6256d703d62fc1f8e",
+      "release_sha256": "676baa98e4b413e8688fd98eec9ca1fe124bd7d4425e09b6256d703d62fc1f8e",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/site_decoder.py",
+      "source_sha256": "62ee5944fdea01f579ebe84b539f993a4a76847f56b2583cd1c87306374aa239",
+      "release_sha256": "62ee5944fdea01f579ebe84b539f993a4a76847f56b2583cd1c87306374aa239",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/run_permutations.py",
+      "source_sha256": "df62365652558266181362904fd2ceb317e35136ba88cea3b546d08992c73483",
+      "release_sha256": "df62365652558266181362904fd2ceb317e35136ba88cea3b546d08992c73483",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/audit_graph_use.py",
+      "source_sha256": "51cf65c2918ff69015c96ee7624facc46e791e93ce6a14822ef9bec7384035c1",
+      "release_sha256": "51cf65c2918ff69015c96ee7624facc46e791e93ce6a14822ef9bec7384035c1",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/verify_execution.py",
+      "source_sha256": "ab957e67289051765a1f540d8943f3b23d69ad42d946c0aee84456959cd43d4e",
+      "release_sha256": "ab957e67289051765a1f540d8943f3b23d69ad42d946c0aee84456959cd43d4e",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/test_pipeline.py",
+      "source_sha256": "fe1c0e517128332dd607e58d2ceeeb7986ab5b9d771f1feeb962861fc502dbd4",
+      "release_sha256": "fe1c0e517128332dd607e58d2ceeeb7986ab5b9d771f1feeb962861fc502dbd4",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/scripts/test_statistics.py",
+      "source_sha256": "3fc527222eb02d17ce4a7c6ef096b01fecef959d7e90c53db0bcecd9b830ddee",
+      "release_sha256": "3fc527222eb02d17ce4a7c6ef096b01fecef959d7e90c53db0bcecd9b830ddee",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_RESTMETA_FMRI/supplementary/focused_strengthening_20261026/run_sensitivity.py",
+      "source_sha256": "e1e7bf2873dafcf55e0cf0301296a2e8f58abaff2ea9f87b3324a771fc9e24a4",
+      "release_sha256": "e1e7bf2873dafcf55e0cf0301296a2e8f58abaff2ea9f87b3324a771fc9e24a4",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_ABIDE_REPLICATION_20261028/replication.py",
+      "source_sha256": "178895a8a69175b8f033df47744cb5172483698e2b6c81306110385dcda9a6c3",
+      "release_sha256": "d2faad47dd3d7feb2a5827a1e78e0a355d7d88aa1065d1ab4e79fc3e6dd9c2f7",
+      "path_only_adaptation": true
+    },
+    {
+      "file": "OBJECTIVE2_ABIDE_REPLICATION_20261028/analysis.py",
+      "source_sha256": "65d4c91c9082501cb1d5cb5e8b82291b3b4054b811175b30c2350bbd972cd752",
+      "release_sha256": "65d4c91c9082501cb1d5cb5e8b82291b3b4054b811175b30c2350bbd972cd752",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_GCNII_SENSITIVITY_20261102/study.py",
+      "source_sha256": "5b863cd67e7be3329195c1f9f560bf1293c1d1dfd3ea95dec4bef1c855297403",
+      "release_sha256": "5b863cd67e7be3329195c1f9f560bf1293c1d1dfd3ea95dec4bef1c855297403",
+      "path_only_adaptation": false
+    },
+    {
+      "file": "OBJECTIVE2_GCNII_SENSITIVITY_20261102/analysis.py",
+      "source_sha256": "3b6949d161a7acfa06b5217900fbb4240d282cf9dcc239b2902e39ed5e3d61c7",
+      "release_sha256": "3b6949d161a7acfa06b5217900fbb4240d282cf9dcc239b2902e39ed5e3d61c7",
+      "path_only_adaptation": false
+    }
+  ]
+}

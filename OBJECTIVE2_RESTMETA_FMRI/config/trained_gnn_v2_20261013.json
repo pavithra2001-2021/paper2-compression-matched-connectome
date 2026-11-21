@@ -1,0 +1,314 @@
+{
+  "version": "2.0",
+  "date": "2026-10-13",
+  "status": "FROZEN_BEFORE_FEATURES_AND_PREDICTIONS",
+  "formal_modality": "resting-state fMRI",
+  "formal_objective": "To evaluate the predictive validity, calibration, finite-scan robustness and cross-site generalizability of trained graph neural networks using autocorrelation-aware graph-spectral representations of resting-state fMRI.",
+  "archived_previous_branch": "<LOCAL_PATH_REDACTED>",
+  "Objective1_unchanged": true,
+  "authoritative_source_N": 1256,
+  "complete_ROI_N_before_QC": 1192,
+  "prediction_N": 1188,
+  "prediction_MDD": 646,
+  "prediction_HC": 542,
+  "primary_test_N": 1150,
+  "primary_test_MDD": 614,
+  "primary_test_HC": 536,
+  "primary_C230_N": 629,
+  "primary_C230_MDD": 336,
+  "primary_C230_HC": 293,
+  "site_rules": {
+    "minimum_total": 30,
+    "minimum_each_diagnosis": 10,
+    "per_site_calibration_minimum_each": 50,
+    "no_performance_based_grouping": true
+  },
+  "sites": [
+    {
+      "site": "S2",
+      "N": 58,
+      "MDD": 30,
+      "HC": 28,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S8",
+      "N": 108,
+      "MDD": 52,
+      "HC": 56,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S9",
+      "N": 97,
+      "MDD": 49,
+      "HC": 48,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S11",
+      "N": 61,
+      "MDD": 32,
+      "HC": 29,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S12",
+      "N": 38,
+      "MDD": 32,
+      "HC": 6,
+      "T": [
+        230
+      ],
+      "primary_test": false,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S14",
+      "N": 96,
+      "MDD": 64,
+      "HC": 32,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S15",
+      "N": 100,
+      "MDD": 50,
+      "HC": 50,
+      "T": [
+        230
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S16",
+      "N": 62,
+      "MDD": 31,
+      "HC": 31,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S17",
+      "N": 91,
+      "MDD": 47,
+      "HC": 44,
+      "T": [
+        230
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S18",
+      "N": 39,
+      "MDD": 20,
+      "HC": 19,
+      "T": [
+        190
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S19",
+      "N": 69,
+      "MDD": 33,
+      "HC": 36,
+      "T": [
+        230
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S21",
+      "N": 155,
+      "MDD": 85,
+      "HC": 70,
+      "T": [
+        230
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S23",
+      "N": 62,
+      "MDD": 32,
+      "HC": 30,
+      "T": [
+        230
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    },
+    {
+      "site": "S25",
+      "N": 152,
+      "MDD": 89,
+      "HC": 63,
+      "T": [
+        230
+      ],
+      "primary_test": true,
+      "TR_status": "UNVERIFIED",
+      "physical_center_mapping": "UNVERIFIED"
+    }
+  ],
+  "input": {
+    "atlas": "AAL-116",
+    "columns_zero_based_half_open": [
+      0,
+      116
+    ],
+    "pipeline": "non-GSR DPARSF consortium derivatives",
+    "reference_volumes": 190,
+    "native_C230_sensitivity": 230,
+    "first190_one_based": [
+      1,
+      190
+    ],
+    "last190_one_based": [
+      41,
+      230
+    ],
+    "position_overlap_volumes": 150,
+    "features": "GNN identity nodes plus signed operator S; LR upper triangle INCLUDING diagonal (6786 entries) of same S",
+    "no_raw_shorter_acquisition_claim": true,
+    "operator": "S=R/lambda_max(full Pearson C), same scalar across arms within participant/context; no degree normalization or absolute edges; retain reconstructed diagonal"
+  },
+  "representations": [
+    "full_FC",
+    "naive_MP",
+    "participant_phase_null_Q99_B100",
+    "training_total_rank_matched_common_boundary"
+  ],
+  "sensitivity_representation": "training_mean_rank_rounded_top_k",
+  "same_participant_exact_rank_control": "IDENTICAL_TO_TEMPORAL_NULL_NOT_AN_INDEPENDENT_ARM",
+  "models": {
+    "primary": "two-layer first-order spectral graph convolution",
+    "node_features": "I_116",
+    "forward": "H1=ReLU(S W0+b0); H2=ReLU(S H1 W1+b1); h=mean_nodes(H2); logit=h w+b",
+    "hidden": 16,
+    "pooling": "mean",
+    "head": "linear",
+    "dropout": 0.2,
+    "loss": "unweighted binary cross entropy with logits",
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "weight_decay_grid": [
+      0.01,
+      0.0001
+    ],
+    "epoch_grid": [
+      80,
+      160
+    ],
+    "batch": "full training fold",
+    "gradient_clip": 5.0,
+    "seed_count": 1,
+    "seed_rule": "same initialization/dropout stream for arms in a given fold/inner role; independent outer contexts; frozen hash seeds",
+    "inner_selection": "equal validation-site macro Brier across all inner predictions",
+    "tie_rule": "within 1e-10 prefer larger weight decay, then fewer epochs",
+    "comparator": "L2 logistic",
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "scaling": "training-only StandardScaler for LR",
+    "class_weight": null,
+    "threshold": 0.5,
+    "target_recalibration": false
+  },
+  "validation": {
+    "mixed_outer_folds": 5,
+    "inner_site_group_folds": 3,
+    "outer_site_holds": 14,
+    "primary_supported_site_holds": 13,
+    "S12": "descriptive_only",
+    "participant_durations_share_role": true,
+    "all_cohort_parameters_fold_local": true
+  },
+  "primary_contrasts": [
+    "GNN temporal_minus_budget_site_macro_Brier",
+    "GNN temporal_minus_budget_mean_abs_p_native230_minus_p_first190"
+  ],
+  "statistical_scope": "Paired conditional fitted-prediction intervals; no algorithm superiority without full nested refitting resampling",
+  "seed": 20261012,
+  "conditional_bootstrap_replicates": 2000,
+  "negative_label_permutation_runs": 10,
+  "full_pipeline_resampling_required_for_superiority": true,
+  "data_cache_hashes": {
+    "source_signal_manifest": "22810d7d0d502eb21ad32d2b1557e3311dad0588ac51049f1d2caa575ba8ee7d",
+    "segment_feasibility": "935b2f54347e6ecb2958a702646372b67ab1791f549a7488990b83e0a7cdc0d4"
+  },
+  "model_fits_executed": 0,
+  "FC_prediction_reconstructions_executed": 0,
+  "surrogate_experiments_executed": 0,
+  "execution_gates": {
+    "QC": "Use audited investigator rule 3/4/5; official scale dictionary remains unavailable; no universal QC or clinical-quality claim",
+    "categorical_fields": "Sex numeric codes retained as categories; no case-only clinical features; no guessed meanings",
+    "physical_sites_TR": "Unverified; cohort-code and derivative-volume claims only",
+    "source_identity": "Source hashes verified before feature construction",
+    "fixtures": "Must pass before predictive training",
+    "predictive_hyperparameters": "Frozen before first score"
+  },
+  "parent_config_sha": "00e4b3a7d6ed6b66cc14c071b6873be47f59c42cc81d3181690757c6e6f93abd",
+  "architecture_novelty_claim": false,
+  "secondary_models": [
+    "logistic on same operators; no MLP"
+  ],
+  "permutation_scope": "10 within-site shuffles; full mixed-site nested fitting for both models and all four core arms; duration replay omitted for shuffled labels; sanity only",
+  "embedding_analysis": "Within each mixed outer fold, split outer test people by site x diagnosis into probe train/test; train scaled L2 probes there for site and diagnosis. Never concatenate embedding coordinates across separately fitted GNNs. Partial multivariate R2 diagnosis|site and site|diagnosis within folds; paired context distances within each frozen model.",
+  "hypothesis": "Temporal-null rank selection reduces GNN sensitivity to finite derivative length and held-cohort shift while retaining useful discrimination relative to full FC and ordinary compression. Both failure and benefit are reportable; no equivalence margin assumed.",
+  "amendments": [
+    "Trained GNN primary; LR control per explicit user instruction",
+    "Common participant/context spectral-norm scaling, reconstructed diagonals retained, LR includes diagonals to match information",
+    "QC documentation uncertainty recorded as scope limitation for existing audited sample; no undocumented score semantics inferred",
+    "Ten nested label permutations confined to mixed-site leakage sanity, all four core arms; no claim of LOSO permutation significance",
+    "Single pre-specified optimization seed; conditional intervals omit optimizer/training uncertainty"
+  ],
+  "participant_roles_sha": "73cb9d07559a6622de7b1fb186a9fac9c4364da74e2dfd1f838d3261493d170b",
+  "constructor_sha": "1b0afb0770f167d4aefe4b6d582e7e241619c8475abec421382c9a327c7c99d7"
+}

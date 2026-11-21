@@ -1,0 +1,981 @@
+{
+  "status": "LOCKED_BEFORE_ADDITIONAL_TRAINING",
+  "date": "2026-10-26",
+  "design": "Supplementary fixed-configuration initialization/dropout sensitivity; original nested selections reused.",
+  "scope": "13 original primary held cohorts, two original representations, original plus two additional seeds.",
+  "tasks": [
+    {
+      "fold": "loso_S2",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 470958977,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.087893548972343,
+        "target": 4481,
+        "attained": 4481,
+        "fixed_k": 4
+      },
+      "original_seed": 2017733104
+    },
+    {
+      "fold": "loso_S2",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 2843524940,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.087893548972343,
+        "target": 4481,
+        "attained": 4481,
+        "fixed_k": 4
+      },
+      "original_seed": 2017733104
+    },
+    {
+      "fold": "loso_S2",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 470958977,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.087893548972343,
+        "target": 4481,
+        "attained": 4481,
+        "fixed_k": 4
+      },
+      "original_seed": 2017733104
+    },
+    {
+      "fold": "loso_S2",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 2843524940,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.087893548972343,
+        "target": 4481,
+        "attained": 4481,
+        "fixed_k": 4
+      },
+      "original_seed": 2017733104
+    },
+    {
+      "fold": "loso_S8",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 1048347453,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4301,
+        "attained": 4301,
+        "fixed_k": 4
+      },
+      "original_seed": 3394269878
+    },
+    {
+      "fold": "loso_S8",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 1165921757,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4301,
+        "attained": 4301,
+        "fixed_k": 4
+      },
+      "original_seed": 3394269878
+    },
+    {
+      "fold": "loso_S8",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 1048347453,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4301,
+        "attained": 4301,
+        "fixed_k": 4
+      },
+      "original_seed": 3394269878
+    },
+    {
+      "fold": "loso_S8",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 1165921757,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4301,
+        "attained": 4301,
+        "fixed_k": 4
+      },
+      "original_seed": 3394269878
+    },
+    {
+      "fold": "loso_S9",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 3290173951,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.093122065079589,
+        "target": 4334,
+        "attained": 4334,
+        "fixed_k": 4
+      },
+      "original_seed": 1491220089
+    },
+    {
+      "fold": "loso_S9",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 3819842399,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.093122065079589,
+        "target": 4334,
+        "attained": 4334,
+        "fixed_k": 4
+      },
+      "original_seed": 1491220089
+    },
+    {
+      "fold": "loso_S9",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 3290173951,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.093122065079589,
+        "target": 4334,
+        "attained": 4334,
+        "fixed_k": 4
+      },
+      "original_seed": 1491220089
+    },
+    {
+      "fold": "loso_S9",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 3819842399,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.093122065079589,
+        "target": 4334,
+        "attained": 4334,
+        "fixed_k": 4
+      },
+      "original_seed": 1491220089
+    },
+    {
+      "fold": "loso_S11",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 2407653920,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0947423402510434,
+        "target": 4461,
+        "attained": 4461,
+        "fixed_k": 4
+      },
+      "original_seed": 2584662784
+    },
+    {
+      "fold": "loso_S11",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 2448241904,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0947423402510434,
+        "target": 4461,
+        "attained": 4461,
+        "fixed_k": 4
+      },
+      "original_seed": 2584662784
+    },
+    {
+      "fold": "loso_S11",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 2407653920,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0947423402510434,
+        "target": 4461,
+        "attained": 4461,
+        "fixed_k": 4
+      },
+      "original_seed": 2584662784
+    },
+    {
+      "fold": "loso_S11",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 2448241904,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0947423402510434,
+        "target": 4461,
+        "attained": 4461,
+        "fixed_k": 4
+      },
+      "original_seed": 2584662784
+    },
+    {
+      "fold": "loso_S14",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 3147742329,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.168087645655296,
+        "target": 4293,
+        "attained": 4293,
+        "fixed_k": 4
+      },
+      "original_seed": 3840168323
+    },
+    {
+      "fold": "loso_S14",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 1198176036,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.168087645655296,
+        "target": 4293,
+        "attained": 4293,
+        "fixed_k": 4
+      },
+      "original_seed": 3840168323
+    },
+    {
+      "fold": "loso_S14",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 3147742329,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.168087645655296,
+        "target": 4293,
+        "attained": 4293,
+        "fixed_k": 4
+      },
+      "original_seed": 3840168323
+    },
+    {
+      "fold": "loso_S14",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 1198176036,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.168087645655296,
+        "target": 4293,
+        "attained": 4293,
+        "fixed_k": 4
+      },
+      "original_seed": 3840168323
+    },
+    {
+      "fold": "loso_S15",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 2454661028,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.0650356990103695,
+        "target": 4357,
+        "attained": 4357,
+        "fixed_k": 4
+      },
+      "original_seed": 1942174220
+    },
+    {
+      "fold": "loso_S15",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 1841250681,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.0650356990103695,
+        "target": 4357,
+        "attained": 4357,
+        "fixed_k": 4
+      },
+      "original_seed": 1942174220
+    },
+    {
+      "fold": "loso_S15",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 2454661028,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.0650356990103695,
+        "target": 4357,
+        "attained": 4357,
+        "fixed_k": 4
+      },
+      "original_seed": 1942174220
+    },
+    {
+      "fold": "loso_S15",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 1841250681,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.0650356990103695,
+        "target": 4357,
+        "attained": 4357,
+        "fixed_k": 4
+      },
+      "original_seed": 1942174220
+    },
+    {
+      "fold": "loso_S16",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 2967414350,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.088270207205435,
+        "target": 4453,
+        "attained": 4453,
+        "fixed_k": 4
+      },
+      "original_seed": 1188232080
+    },
+    {
+      "fold": "loso_S16",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 2159176828,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.088270207205435,
+        "target": 4453,
+        "attained": 4453,
+        "fixed_k": 4
+      },
+      "original_seed": 1188232080
+    },
+    {
+      "fold": "loso_S16",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 2967414350,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.088270207205435,
+        "target": 4453,
+        "attained": 4453,
+        "fixed_k": 4
+      },
+      "original_seed": 1188232080
+    },
+    {
+      "fold": "loso_S16",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 2159176828,
+      "selected_gnn": [
+        "gnn",
+        0.01,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.088270207205435,
+        "target": 4453,
+        "attained": 4453,
+        "fixed_k": 4
+      },
+      "original_seed": 1188232080
+    },
+    {
+      "fold": "loso_S17",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 3014198998,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.05993848394866,
+        "target": 4386,
+        "attained": 4386,
+        "fixed_k": 4
+      },
+      "original_seed": 2597007509
+    },
+    {
+      "fold": "loso_S17",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 359146092,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.05993848394866,
+        "target": 4386,
+        "attained": 4386,
+        "fixed_k": 4
+      },
+      "original_seed": 2597007509
+    },
+    {
+      "fold": "loso_S17",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 3014198998,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.05993848394866,
+        "target": 4386,
+        "attained": 4386,
+        "fixed_k": 4
+      },
+      "original_seed": 2597007509
+    },
+    {
+      "fold": "loso_S17",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 359146092,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.05993848394866,
+        "target": 4386,
+        "attained": 4386,
+        "fixed_k": 4
+      },
+      "original_seed": 2597007509
+    },
+    {
+      "fold": "loso_S18",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 1532159205,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0851697777054,
+        "target": 4579,
+        "attained": 4579,
+        "fixed_k": 4
+      },
+      "original_seed": 3198173534
+    },
+    {
+      "fold": "loso_S18",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 1302659069,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0851697777054,
+        "target": 4579,
+        "attained": 4579,
+        "fixed_k": 4
+      },
+      "original_seed": 3198173534
+    },
+    {
+      "fold": "loso_S18",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 1532159205,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0851697777054,
+        "target": 4579,
+        "attained": 4579,
+        "fixed_k": 4
+      },
+      "original_seed": 3198173534
+    },
+    {
+      "fold": "loso_S18",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 1302659069,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.0851697777054,
+        "target": 4579,
+        "attained": 4579,
+        "fixed_k": 4
+      },
+      "original_seed": 3198173534
+    },
+    {
+      "fold": "loso_S19",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 100568605,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.092564732553997,
+        "target": 4429,
+        "attained": 4429,
+        "fixed_k": 4
+      },
+      "original_seed": 4121251771
+    },
+    {
+      "fold": "loso_S19",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 890872313,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.092564732553997,
+        "target": 4429,
+        "attained": 4429,
+        "fixed_k": 4
+      },
+      "original_seed": 4121251771
+    },
+    {
+      "fold": "loso_S19",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 100568605,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.092564732553997,
+        "target": 4429,
+        "attained": 4429,
+        "fixed_k": 4
+      },
+      "original_seed": 4121251771
+    },
+    {
+      "fold": "loso_S19",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 890872313,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        160
+      ],
+      "budget": {
+        "cutoff": 6.092564732553997,
+        "target": 4429,
+        "attained": 4429,
+        "fixed_k": 4
+      },
+      "original_seed": 4121251771
+    },
+    {
+      "fold": "loso_S21",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 2423794132,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.060115797621093,
+        "target": 4195,
+        "attained": 4195,
+        "fixed_k": 4
+      },
+      "original_seed": 2972529124
+    },
+    {
+      "fold": "loso_S21",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 160552518,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.060115797621093,
+        "target": 4195,
+        "attained": 4195,
+        "fixed_k": 4
+      },
+      "original_seed": 2972529124
+    },
+    {
+      "fold": "loso_S21",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 2423794132,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.060115797621093,
+        "target": 4195,
+        "attained": 4195,
+        "fixed_k": 4
+      },
+      "original_seed": 2972529124
+    },
+    {
+      "fold": "loso_S21",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 160552518,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.060115797621093,
+        "target": 4195,
+        "attained": 4195,
+        "fixed_k": 4
+      },
+      "original_seed": 2972529124
+    },
+    {
+      "fold": "loso_S23",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 3241869377,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4465,
+        "attained": 4465,
+        "fixed_k": 4
+      },
+      "original_seed": 900472466
+    },
+    {
+      "fold": "loso_S23",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 467561435,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4465,
+        "attained": 4465,
+        "fixed_k": 4
+      },
+      "original_seed": 900472466
+    },
+    {
+      "fold": "loso_S23",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 3241869377,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4465,
+        "attained": 4465,
+        "fixed_k": 4
+      },
+      "original_seed": 900472466
+    },
+    {
+      "fold": "loso_S23",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 467561435,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.082956813358106,
+        "target": 4465,
+        "attained": 4465,
+        "fixed_k": 4
+      },
+      "original_seed": 900472466
+    },
+    {
+      "fold": "loso_S25",
+      "arm": "temporal",
+      "replicate": 1,
+      "seed": 49705118,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.101144829753258,
+        "target": 4101,
+        "attained": 4101,
+        "fixed_k": 4
+      },
+      "original_seed": 569084466
+    },
+    {
+      "fold": "loso_S25",
+      "arm": "temporal",
+      "replicate": 2,
+      "seed": 1827885655,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.101144829753258,
+        "target": 4101,
+        "attained": 4101,
+        "fixed_k": 4
+      },
+      "original_seed": 569084466
+    },
+    {
+      "fold": "loso_S25",
+      "arm": "budget",
+      "replicate": 1,
+      "seed": 49705118,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.101144829753258,
+        "target": 4101,
+        "attained": 4101,
+        "fixed_k": 4
+      },
+      "original_seed": 569084466
+    },
+    {
+      "fold": "loso_S25",
+      "arm": "budget",
+      "replicate": 2,
+      "seed": 1827885655,
+      "selected_gnn": [
+        "gnn",
+        0.0001,
+        80
+      ],
+      "budget": {
+        "cutoff": 6.101144829753258,
+        "target": 4101,
+        "attained": 4101,
+        "fixed_k": 4
+      },
+      "original_seed": 569084466
+    }
+  ],
+  "new_fits_maximum": 52,
+  "new_training_seconds_maximum": 1800,
+  "new_epochs_total": 5920,
+  "feasibility": "Original complete nested model-task completion gaps: median 28.44 s, 90th percentile 39.58 s. Single outer fits are cheaper; conservative 52*40 s proxy is ~35 minutes, while nested tasks contain six inner training trajectories plus outer fitting and logistic fits. Expected outer-only time is minutes; strict training cap 30 minutes.",
+  "seed_generation": "common.seed('focused_strengthening_20261026', fold, replicate), replicate 1 or 2; same integer for both arms within fold.",
+  "selection_uncertainty": "Not measured; original seed also informed original inner selection. No seed, epoch, cohort or configuration selected using new outcomes.",
+  "splits": "Original fixed participant roles, including S12 in training where originally included; no S12 test fold.",
+  "metrics": {
+    "performance": "Equal-cohort macro AUC and Brier on first190; same participants paired by index/fold/replicate.",
+    "stability": "Participant mean absolute native230-first190 probability change in 629 people; last190-first190 secondary.",
+    "uncertainty": "Descriptive three-seed values/ranges/SD only. No seed p-values, bootstrap or algorithm-level CIs.",
+    "collapse": "Report exact constant probabilities, probability SD/range and all-same hard decisions separately. Near-constant flag uses probability range <=1e-6; no exclusion based on it."
+  },
+  "work_package_B": "Reuse existing saved operator relative Frobenius changes, ranks, original predictions and fixed-model representation swaps; summarize identical/non-identical and cohort strata without subgroup predictive claims or p-values.",
+  "B_distance": "||S_budget-S_temporal||_F / ||S_temporal||_F, from existing diagnostics; report denominator and reverse orientation separately where useful.",
+  "B_associations": "Descriptive Spearman magnitude association for all/non-identical and each cohort. No causal inference; separately trained-model gap differs from same-model swap sensitivity.",
+  "stop_rule": "52 fits only, no replacement seeds or tuning; stop on integrity/leakage/numerical failure or training time cap. No new architecture/data/thresholds.",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "preflight_integrity": {
+    "manifest_entries_verified": 452,
+    "primary_lock_entries_verified": 3376
+  },
+  "runner_sha256": "e1e7bf2873dafcf55e0cf0301296a2e8f58abaff2ea9f87b3324a771fc9e24a4",
+  "primary_config_sha256": "f1d309d92c82a95d8ec2cbe93eb3b84f1eae3c68231124977b1d930b5f25d0ec",
+  "outputs": [
+    "protocol.json",
+    "checkpoints/*.pt",
+    "participant_predictions.csv",
+    "overlap_diagnostics.csv",
+    "final_evidence.json"
+  ]
+}

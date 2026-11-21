@@ -1,0 +1,154 @@
+{
+  "status": "FROZEN_BEFORE_ASD_FEATURES_AND_PREDICTIONS",
+  "date": "2026-10-28",
+  "frozen_utc": "2026-10-28T06:25:41.213759+00:00",
+  "models": {
+    "primary": "two-layer first-order spectral graph convolution",
+    "node_features": "I_116",
+    "forward": "H1=ReLU(S W0+b0); H2=ReLU(S H1 W1+b1); h=mean_nodes(H2); logit=h w+b",
+    "hidden": 16,
+    "pooling": "mean",
+    "head": "linear",
+    "dropout": 0.2,
+    "loss": "unweighted binary cross entropy with logits",
+    "optimizer": "Adam",
+    "learning_rate": 0.01,
+    "weight_decay_grid": [
+      0.01,
+      0.0001
+    ],
+    "epoch_grid": [
+      80,
+      160
+    ],
+    "batch": "full training fold",
+    "gradient_clip": 5.0,
+    "seed_count": 1,
+    "seed_rule": "same initialization/dropout stream for arms in a given fold/inner role; independent outer contexts; frozen hash seeds",
+    "inner_selection": "equal validation-site macro Brier across all inner predictions",
+    "tie_rule": "within 1e-10 prefer larger weight decay, then fewer epochs",
+    "comparator": "L2 logistic",
+    "C_grid": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "scaling": "training-only StandardScaler for LR",
+    "class_weight": null,
+    "threshold": 0.5,
+    "target_recalibration": false
+  },
+  "participant_roles_sha": "9f7c517a3a8dcdad44d12acb024808a6447bb9894986267988695d4c0af2001b",
+  "scope": "Secondary ASD cross-disorder methodological replication, NOT independent MDD clinical validation",
+  "paper1_overlap": "Same ABIDE derivatives and temporal-null methodology as Paper 1, submitted to Array; new trained predictive endpoints only. Added after observing REST results; not part of original primary study.",
+  "primary": "Equal-center GNN Brier temporal minus training-rank-budget, primary seed only; negative favors temporal. No equivalence margin or automatic superiority claim.",
+  "arms": [
+    "full",
+    "mp",
+    "temporal",
+    "budget",
+    "fixed"
+  ],
+  "source_algorithm_hashes": {
+    "common.py": "f996f313b9166a3d701cc0c84e12b0328ce1c45553f69a5fc53bac0fe22bb3ba",
+    "representations.py": "1b0afb0770f167d4aefe4b6d582e7e241619c8475abec421382c9a327c7c99d7",
+    "models.py": "3a54b0bea5349d79a88b7fc7ef552cc43076f6096d9ab63afc84dec2dc3aaa03",
+    "experiment.py": "95d7ecdc98706f3874398a60135c7a74e6bd6bddef62c8e33b3f24ca6f36b1ee",
+    "metrics.py": "bb5fe049bfe10e2c3b5637acbb76011b34dd43e652cf71d7aa829fb2f274b389",
+    "metric_uncertainty.py": "46e468fad079d726b3783232115d826dcc09673faa7a7b51459a6dfcb55c9738",
+    "analyze_results.py": "717727493e4ee703595764b9e0ac5ce990f271ba158be8abad94a2274788e29f"
+  },
+  "implementation_hashes": {
+    "replication.py": "178895a8a69175b8f033df47744cb5172483698e2b6c81306110385dcda9a6c3",
+    "analysis.py": "65d4c91c9082501cb1d5cb5e8b82291b3b4054b811175b30c2350bbd972cd752",
+    "run.ps1": "d5d09c1983163b9cf0e27352864efeac51a8883cf31d87484caa657a4e6f7a12"
+  },
+  "preprocessing": {
+    "pipeline": "PCP DPARSF filt_noglobal rois_aal",
+    "additional_filtering_GSR_smoothing_censoring": "none",
+    "first190": "rows 0:190 of already preprocessed derivatives; no additional volume discard",
+    "native230_adapter_name": "first230 = rows 0:230, NOT full original run",
+    "last190": "rows 40:230, fixed overlap150",
+    "normalization": "Frozen Pearson sample standardization within person and segment; same largest full-FC eigenvalue scaling across arms",
+    "phase_null": "B100 pooled .99; frozen DC/Nyquist convention; recomputed for every segment; seed from source hash and context",
+    "length_scope": "retained derivative volumes, not equal physical duration; whole-run preprocessing precedes segmentation"
+  },
+  "eligibility": {
+    "N": 323,
+    "ASD": 156,
+    "HC": 167,
+    "centers": [
+      "LEUVEN",
+      "PITT",
+      "UM",
+      "USM",
+      "YALE"
+    ],
+    "min_total": 30,
+    "min_each_class": 10,
+    "no_ROI_imputation": true,
+    "constant_sd_threshold": 1e-10,
+    "provider_QC": {
+      "qc_rater_1": [
+        "OK"
+      ],
+      "qc_anat_rater_2": [
+        "OK",
+        "maybe"
+      ],
+      "qc_func_rater_2": [
+        "OK",
+        "maybe"
+      ],
+      "qc_anat_rater_3": [
+        "OK"
+      ],
+      "qc_func_rater_3": [
+        "OK"
+      ]
+    },
+    "age_restriction": "none"
+  },
+  "validation": "5 held-center folds, GroupKFold(3) inner roles explicitly frozen; training-only scaler, rank budget and tuning. No mixed-site analysis or target adaptation.",
+  "seed_protocol": {
+    "function": "common.seed with fixed ABIDE_REPLICATION_20261028 namespace; exact fold seeds in participant_roles.json",
+    "primary": 0,
+    "additional": [
+      1,
+      2
+    ],
+    "extra_arms": [
+      "temporal",
+      "budget"
+    ],
+    "retune_extra_seeds": false,
+    "extra_segment_replay": true
+  },
+  "confounding": {
+    "baseline": "Age, recorded sex (male indicator), provider mean FD; training-only StandardScaler and logistic C grid with same inner macro Brier selection",
+    "low_motion": "Evaluate existing primary predictions for provider func_mean_fd <=0.2; no refitting; report center/class counts and conditional scope",
+    "associations": "Descriptive within-center probability correlations with age and mean FD, plus sample demographic summaries; no causal disease-specific claims"
+  },
+  "statistics": {
+    "bootstrap_B": 2000,
+    "paired": "Same resamples for all model comparisons; within-center diagnosis-stratified and separate center-cluster resampling",
+    "scope": "Conditional on fitted predictions; omits training-sample and selection variability; five centers limits primary inference and three centers limits stability inference",
+    "primary_metric": "Equal-center macro Brier",
+    "secondary": "AUC, Brier, log loss, threshold0.5 balanced accuracy, calibration, stability and operator identity",
+    "stability": "Pooled mean absolute probability change first230 versus first190, plus fixed last190 replay; equal-center summaries also reported",
+    "calibration": "Pooled diagnostic intercept/slope using frozen metrics implementation; no recalibration; site slopes suppressed unless >=50 per class; 2000 pooled stratified fixed-score calibration resamples with failure counts",
+    "collapse": "Report probability range<=1e-7 as constant; also range<=1e-4, standard deviation and all-one-class predictions; retain all results",
+    "multiplicity": "Only primary GNN temporal-budget Brier contrast is primary; all other intervals descriptive, not a significance search"
+  },
+  "limits": {
+    "outer_primary_GNN": 25,
+    "outer_primary_LR": 25,
+    "extra_GNN": 20,
+    "inner_GNN_trajectories": 150,
+    "inner_LR": 375,
+    "confound_LR": 80,
+    "stop": "One fixed experiment. Stop on unresolved identity/atlas/leakage/integrity errors; repair execution errors only with recorded provenance. No architecture, dataset, atlas, GSR or grid expansion after results."
+  }
+}
