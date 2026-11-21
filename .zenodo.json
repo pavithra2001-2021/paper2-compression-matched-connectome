@@ -1,0 +1,24 @@
+{
+  "title": "A compression-matched evaluation of individualized spectral selection for multisite functional connectome prediction — research code",
+  "description": "Code-only release for the frozen REST-meta-MDD primary study, separately trained ABIDE-I ASD methodological replication, and explicitly post-hoc architecture sensitivity analyses. Restricted datasets, participant-level predictions, participant manifests and model checkpoints are excluded. See README for authorized-data prerequisites. Public access is provided with copyright retained; no open-source reuse license is granted in this version.",
+  "upload_type": "software",
+  "version": "v1.0.0",
+  "creators": [
+    {
+      "name": "N., Pavithra",
+      "affiliation": "Vellore Institute of Technology"
+    },
+    {
+      "name": "Jaisankar, N.",
+      "affiliation": "Vellore Institute of Technology"
+    }
+  ],
+  "license": "other-closed",
+  "keywords": [
+    "functional connectivity",
+    "spectral truncation",
+    "graph neural networks",
+    "REST-meta-MDD",
+    "ABIDE"
+  ]
+}
